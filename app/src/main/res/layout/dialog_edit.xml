@@ -7,9 +7,10 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
@@ -26,7 +27,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/baeminjua"
             android:text="게시글 제목"
+            android:textColor="#050505"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,20 +39,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="게시글 제목"
+            android:fontFamily="@font/baeminjua"
+            android:text="게시글 내용"
+            android:textColor="#050505"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/ed_title"
             app:layout_constraintTop_toBottomOf="@+id/ed_title" />
 
         <EditText
             android:id="@+id/ed_title"
-            android:layout_width="wrap_content"
-            android:layout_height="45sp"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
             android:layout_marginTop="8dp"
             android:cursorVisible="true"
             android:ems="10"
+            android:hint="write your title"
+            android:imeOptions="flagNoExtractUi"
             android:inputType="textMultiLine"
+
             android:lines="8"
-            android:maxHeight="100dp"
+            android:maxHeight="300dp"
             android:maxLines="10"
             android:minLines="6"
             android:scrollbars="vertical"
@@ -57,15 +67,17 @@
 
         <EditText
             android:id="@+id/ed_content"
-            android:layout_width="wrap_content"
-            android:layout_height="45sp"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
             android:layout_marginTop="16dp"
             android:cursorVisible="true"
             android:ems="10"
-            android:imeOptions="actionDone"
+            android:hint="write your content"
+
+            android:imeOptions="flagNoExtractUi"
             android:inputType="textMultiLine"
             android:lines="8"
-            android:maxHeight="100dp"
+            android:maxHeight="300dp"
             android:maxLines="20"
             android:minLines="6"
             android:scrollbars="vertical"
