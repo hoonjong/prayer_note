@@ -1,104 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ConstraintLayout"
+
+    <EditText
+        android:id="@+id/ed_title"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_height="45sp"
+        android:layout_margin="20sp"
+        android:background="#E6EE9C"
 
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:cursorVisible="true"
+        android:ems="10"
+        android:fontFamily="@font/baeminjua"
+        android:hint="제목"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxHeight="45dp"
+        android:maxLines="10"
+        android:minLines="6"
 
-        <TextView
-            android:id="@+id/tv_des_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/baeminjua"
-            android:text="게시글 제목"
-            android:textColor="#050505"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@+id/tv_des_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_des_title" />
 
-        <TextView
-            android:id="@+id/tv_des_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/baeminjua"
-            android:text="게시글 내용"
-            android:textColor="#050505"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/ed_title"
-            app:layout_constraintTop_toBottomOf="@+id/ed_title" />
+    <EditText
+        android:id="@+id/ed_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="#E6EE9C"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:fontFamily="@font/baeminjua"
+        android:hint="내용"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxHeight="300dp"
+        android:maxLines="20"
+        android:minLines="6"
 
-        <EditText
-            android:id="@+id/ed_title"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="8dp"
-            android:cursorVisible="true"
-            android:ems="10"
-            android:hint="write your title"
-            android:imeOptions="flagNoExtractUi"
-            android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@+id/tv_des_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_des_content" />
 
-            android:lines="8"
-            android:maxHeight="300dp"
-            android:maxLines="10"
-            android:minLines="6"
-            android:scrollbars="vertical"
-            app:layout_constraintStart_toStartOf="@+id/tv_des_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_des_title" />
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10sp"
+        android:fontFamily="@font/baeminjua"
+        android:background="@drawable/edge"
+        android:text="저장"
+        android:textColor="#111112" />
 
-        <EditText
-            android:id="@+id/ed_content"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="16dp"
-            android:cursorVisible="true"
-            android:ems="10"
-            android:hint="write your content"
-
-            android:imeOptions="flagNoExtractUi"
-            android:inputType="textMultiLine"
-            android:lines="8"
-            android:maxHeight="300dp"
-            android:maxLines="20"
-            android:minLines="6"
-            android:scrollbars="vertical"
-            app:layout_constraintStart_toStartOf="@+id/tv_des_content"
-            app:layout_constraintTop_toBottomOf="@+id/tv_des_content" />
-
-        <Button
-            android:id="@+id/btn_ok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/edge"
-            android:text="확인"
-            android:textColor="#111112"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
