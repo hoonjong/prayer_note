@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_margin="13dp"
     android:clickable="false"
     android:descendantFocusability="blocksDescendants"
+    android:background="@color/white"
     android:focusable="false"
     android:focusableInTouchMode="false"
     app:cardCornerRadius="15dp"
@@ -15,7 +16,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/tv_title"
